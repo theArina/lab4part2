@@ -9,7 +9,32 @@
 
 #include <stdio.h>
 
+void printText(char *str, ...)
+{
+	while (*str != '\0')
+	{
+		if (*str = '*')
+		{
+			printf("%c", 'l');
+			str++;
+		}
+		else
+		{
+			printf("%c", *str);
+			str++;
+		}
+	}
+	printf("\n");
+}
+
 int main()
 {
+	char *str = "hi * are *";
+	char *str2 = "how";
+	char *str3 = "you";
+
+	printText(str, str2, str3);
+
+	getch();
 	return 0;
 }
