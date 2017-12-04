@@ -11,25 +11,25 @@
 
 void printText(char *str, ...)
 {
+	char **p = &str;
 	while (*str != '\0')
 	{
-		if (*str = '*')
+		if (*str == '*' && (*(str + 1) > '0' && *(str + 1) <= '9'))
 		{
-			printf("%c", 'l');
+			p++;
+			printf("%s", *p);
 			str++;
 		}
 		else
-		{
-			printf("%c", *str);
-			str++;
-		}
+			printf("%c", *str); 
+		str++;
 	}
 	printf("\n");
 }
 
 int main()
 {
-	char *str = "hi * are *";
+	char *str = "hi *1 are *2";
 	char *str2 = "how";
 	char *str3 = "you";
 
