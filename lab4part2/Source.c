@@ -17,7 +17,7 @@ void printText(char *str, ...)
 		if (*str == '*' && (*(str + 1) > '0' && *(str + 1) <= '9'))
 		{
 			p++;
-			printf("%s", *((char**)p));
+			printf("%s", *p);
 			str++;
 		}
 		else
