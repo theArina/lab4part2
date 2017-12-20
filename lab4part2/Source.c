@@ -16,8 +16,8 @@ void printText(char *str, ...)
 	{
 		if (*str == '*' && (*(str + 1) > '0' && *(str + 1) <= '9'))
 		{
-			p++;
-			printf("%s", *p);
+			printf("%d\n", (int)*(str + 1));
+			printf("%s", p[1]);
 			str++;
 		}
 		else
@@ -29,7 +29,7 @@ void printText(char *str, ...)
 
 int main()
 {
-	char *str = "hi *1 are *2";
+	char *str = "hi *1 are *2 *1 *1";
 	char *str2 = "how";
 	char *str3 = "you";
 
